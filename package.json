@@ -1,0 +1,10 @@
+{
+    "name": "ryans-react-repository",
+    "version": "0.1.0",
+    "license": "GPL-3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ryan-A-B/ryans-react-respository"
+    },
+    "bugs": "https://github.com/Ryan-A-B/ryans-react-respository/issues"
+}
