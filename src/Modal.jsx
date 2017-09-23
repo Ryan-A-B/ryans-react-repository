@@ -1,3 +1,5 @@
+import {Button} from "./Button.jsx";
+
 export function Modal ({className, tabIndex, role, ...attributes}) {
     Object.assign(attributes, {
         className: "modal " + (className || ""),
@@ -36,11 +38,11 @@ export function HeaderWithoutClose ({className, ...attributes}) {
 export function Header ({children, ...attributes}) {
     return (
         <HeaderWithoutClose {...attributes}>
-            <Misc.Button className="close" data-dismiss="modal" aria-label="Close">
+            <Button className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">
                     &times;
                 </span>
-            </Misc.Button>
+            </Button>
             {children}
         </HeaderWithoutClose>
     );
