@@ -36,4 +36,4 @@ class WithFocus extends React.Component {
     }
 }
 
-export default WithFocus;
+module.exports = WithFocus;

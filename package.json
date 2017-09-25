@@ -1,6 +1,6 @@
 {
     "name": "ryans-react-repository",
-    "version": "0.1.3",
+    "version": "0.1.7",
     "license": "GPL-3.0",
     "entry": "index.js",
     "scripts": {
