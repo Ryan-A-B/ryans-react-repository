@@ -1,7 +1,9 @@
-const Button = require("./src/Button.jsx");
-const Modal = require("./src/Modal.jsx");
+import Button from "./src/Button.jsx";
+import Modal from "./src/Modal.jsx";
+import WithFocus from "./src/WithFocus.jsx";
 
-module.exports = {
+export default {
     Button,
-    Modal
+    Modal,
+    WithFocus
 };
