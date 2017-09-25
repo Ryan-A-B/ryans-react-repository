@@ -1,8 +1,8 @@
-import Button from "./src/Button.jsx";
-import Modal from "./src/Modal.jsx";
-import WithFocus from "./src/WithFocus.jsx";
+var Button = require("./dist/Button.js");
+var Modal = require("./dist/Modal.js");
+var WithFocus = require("./dist/WithFocus.js");
 
-export default {
+module.exports = {
     Button,
     Modal,
     WithFocus

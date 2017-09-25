@@ -1,4 +1,4 @@
-import {Button} from "./Button.jsx";
+import {Button} from "./Button.js";
 
 export function Modal ({className, tabIndex, role, ...attributes}) {
     Object.assign(attributes, {

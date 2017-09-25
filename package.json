@@ -1,10 +1,22 @@
 {
     "name": "ryans-react-repository",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "license": "GPL-3.0",
+    "entry": "index.js",
+    "scripts": {
+        "build": "babel src/ --out-dir dist/",
+        "prepublish": "npm update && npm run build"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Ryan-A-B/ryans-react-respository"
     },
-    "bugs": "https://github.com/Ryan-A-B/ryans-react-respository/issues"
+    "bugs": "https://github.com/Ryan-A-B/ryans-react-respository/issues",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-transform-object-assign": "^6.8.0",
+        "babel-plugin-transform-object-rest-spread": "^6.19.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1"
+    }
 }
