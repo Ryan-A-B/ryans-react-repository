@@ -15,6 +15,14 @@ export function Text ({...attributes}) {
     return <Input {...attributes}/>
 }
 
+export function Password ({...attributes}) {
+    Object.assign(attributes, {
+        type: "password"
+    });
+
+    return <Input {...attributes}/>
+}
+
 export function Email ({...attributes}) {
     Object.assign(attributes, {
         type: "email"

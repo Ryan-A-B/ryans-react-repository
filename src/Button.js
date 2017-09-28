@@ -21,5 +21,5 @@ export function CallToAction ({className, ...attributes}) {
         className: "btn-cta " + (className || "")
     });
 
-    return <SubmitButton {...attributes}/>;
+    return <Submit {...attributes}/>;
 }
