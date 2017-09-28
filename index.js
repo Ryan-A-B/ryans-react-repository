@@ -4,6 +4,8 @@ var Modal = require("./dist/Modal.js");
 var WithFocus = require("./dist/WithFocus.js");
 var Dropdown = require("./dist/Dropdown.js");
 var Input = require("./dist/Input.js");
+var Nav = require("./dist/Nav.js");
+var Tab = require("./dist/Tab.js");
 
 module.exports = {
     Button,
@@ -11,5 +13,7 @@ module.exports = {
     Modal,
     WithFocus,
     Dropdown,
-    Input
+    Input,
+    Nav,
+    Tab
 };
