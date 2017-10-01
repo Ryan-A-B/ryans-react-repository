@@ -6,7 +6,8 @@ var Dropdown = require("./dist/Dropdown.js");
 var Input = require("./dist/Input.js");
 var Nav = require("./dist/Nav.js");
 var Tab = require("./dist/Tab.js");
-var Navbar = reuqire("./dist/Navbar.js");
+var Navbar = require("./dist/Navbar.js");
+var Card = require("./dist/Card.js");
 
 module.exports = {
     Button,
@@ -17,5 +18,6 @@ module.exports = {
     Input,
     Nav,
     Tab,
-    Navbar
+    Navbar,
+    Card
 };
