@@ -23,3 +23,14 @@ export function CallToAction ({className, ...attributes}) {
 
     return <Submit {...attributes}/>;
 }
+
+export function Close ({className, ...attributes}) {
+    Object.assign(attributes, {
+        type: "button",
+        className: "close " + (className || ""),
+        "aria-label": "close",
+        children: <span aria-hidden="true">&times;</span>
+    });
+
+    return <button {...attributes}/>;
+}
