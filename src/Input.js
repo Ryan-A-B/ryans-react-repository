@@ -1,6 +1,6 @@
 export function Input ({className, onChange, ...attributes}) {
     Object.assign(attributes, {
-        className: "form-control",
+        className: "form-control " + (className || ""),
         onChange: (e) => {onChange($(e.target).val());}
     });
 
