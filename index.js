@@ -7,6 +7,7 @@ var Input = require("./dist/Input.js");
 var Nav = require("./dist/Nav.js");
 var Tab = require("./dist/Tab.js");
 var Navbar = require("./dist/Navbar.js");
+var Panel = require("./dist/Panel.js");
 var Card = require("./dist/Card.js");
 
 module.exports = {
@@ -19,5 +20,6 @@ module.exports = {
     Nav,
     Tab,
     Navbar,
+    Panel,
     Card
 };
