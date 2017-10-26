@@ -9,6 +9,7 @@ var Tab = require("./dist/Tab.js");
 var Navbar = require("./dist/Navbar.js");
 var Panel = require("./dist/Panel.js");
 var Card = require("./dist/Card.js");
+var Misc = require("./dist/Misc.js");
 
 module.exports = {
     Button,
@@ -21,5 +22,6 @@ module.exports = {
     Tab,
     Navbar,
     Panel,
-    Card
+    Card,
+    Misc
 };

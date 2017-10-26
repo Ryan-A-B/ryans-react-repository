@@ -30,6 +30,14 @@ export function Body ({className, ...attributes}) {
     return <div {...attributes}/>;
 }
 
+export function Footer ({className, ...attributes}) {
+    Object.assign(attributes, {
+        className: "panel-footer " + (className || "")
+    });
+
+    return <div {...attributes}/>;
+}
+
 export function Group ({className, ...attributes}) {
     Object.assign(attributes, {
         className: "panel-group " + (className || "")
