@@ -48,6 +48,14 @@ export function Number ({...attributes}) {
     return <Input {...attributes}/>
 }
 
+export function Numeral ({...attributes}) {
+    Object.assign(attributes, {
+        type: "text"
+    });
+
+    return <Input {...attributes}/>;
+}
+
 export function Group ({className, ...attributes}) {
     Object.assign(attributes, {
         className: "input-group " + (className || "")

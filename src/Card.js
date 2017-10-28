@@ -29,3 +29,16 @@ export function Title ({className, ...attributes}) {
 
     return <h4 {...attributes}/>
 }
+
+export function Basic ({header, children, ...attributes}) {
+    return (
+        <Container {...attributes}>
+            <Header>
+                {header}
+            </Header>
+            <Body>
+                {children}
+            </Body>
+        </Container>
+    );
+}
