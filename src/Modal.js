@@ -9,6 +9,7 @@ export function Modal ({className, tabIndex, role, ...attributes}) {
 
     return <div {...attributes}/>;
 }
+export const Container = Modal;
 
 export function Dialog ({className, role, ...attributes}) {
     Object.assign(attributes, {
