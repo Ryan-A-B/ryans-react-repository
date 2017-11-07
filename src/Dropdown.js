@@ -1,3 +1,5 @@
+import * as Button from "./Button.js";
+
 export function Dropdown ({className, ...attributes}) {
     Object.assign(attributes, {
         className: "dropdown " + (className || ""),
@@ -5,6 +7,7 @@ export function Dropdown ({className, ...attributes}) {
 
     return <div {...attributes}/>;
 }
+export const Container = Dropdown;
 
 export function Toggle ({className, ...attributes}) {
     Object.assign(attributes, {
@@ -14,7 +17,7 @@ export function Toggle ({className, ...attributes}) {
         "aria-expanded": "false"
     });
 
-    return <R3.Button.Button {...attributes}/>
+    return <Button.Button {...attributes}/>
 }
 
 export function Menu ({className, ...attributes}) {
