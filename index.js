@@ -1,27 +1,13 @@
-var Button = require("./dist/Button.js");
-var Form = require("./dist/Form.js");
-var Modal = require("./dist/Modal.js");
-var WithFocus = require("./dist/WithFocus.js");
-var Dropdown = require("./dist/Dropdown.js");
-var Input = require("./dist/Input.js");
-var Nav = require("./dist/Nav.js");
-var Tab = require("./dist/Tab.js");
-var Navbar = require("./dist/Navbar.js");
-var Panel = require("./dist/Panel.js");
-var Card = require("./dist/Card.js");
-var Misc = require("./dist/Misc.js");
-
-module.exports = {
-    Button,
-    Form,
-    Modal,
-    WithFocus,
-    Dropdown,
-    Input,
-    Nav,
-    Tab,
-    Navbar,
-    Panel,
-    Card,
-    Misc
-};
+exports.Button = require("./dist/Button.js");
+exports.Form = require("./dist/Form.js");
+exports.Modal = require("./dist/Modal.js");
+exports.WithFocus = require("./dist/WithFocus.js");
+exports.Dropdown = require("./dist/Dropdown.js");
+exports.Input = require("./dist/Input.js");
+exports.Nav = require("./dist/Nav.js");
+exports.Tab = require("./dist/Tab.js");
+exports.Navbar = require("./dist/Navbar.js");
+exports.Panel = require("./dist/Panel.js");
+exports.Card = require("./dist/Card.js");
+exports.Misc = require("./dist/Misc.js");
+exports.Optimisation = require("./dist/Optimisation.js");
