@@ -93,3 +93,17 @@ export function Select ({options, onChange, className, ...attributes}) {
         </select>
     );
 }
+
+const makeCheckedInput = (name) => {
+    return ({checked, className, ...attributes}) => {
+        Object.assign(attributes, {
+            role: 'button',
+            className: `${name} ${checked ? 'checked' : ''} ${className || ''}`
+        });
+
+        return <div {...attributes}/>;
+    };
+};
+
+export const Checkbox = makeCheckedInput("check-button");
+export const Radio = makeCheckedInput("radio-button");

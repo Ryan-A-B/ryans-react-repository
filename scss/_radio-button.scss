@@ -1,0 +1,35 @@
+.check-button, .radio-button {
+  &:before {
+    $padding: 0.1rem;
+    $line-height: 1rem;
+    $size: $line-height + 2 * $padding;
+
+    display: inline-block;
+    width: $size;
+    height: $size;
+    line-height: $line-height;
+    padding: $padding;
+    border: 0.1rem solid #111;
+
+    content: " ";
+  }
+}
+
+.check-button.checked {
+  &:before {
+    content: "\f00c";
+  }
+}
+
+.radio-button {
+  &:before {
+    border-radius: 0.6rem;
+  }
+
+  &.checked {
+    &:before {
+      background: #111;
+      box-shadow: inset 0 0 0 0.25rem #fff;
+    }
+  }
+}
