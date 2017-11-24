@@ -1,3 +1,7 @@
+import uuid from "uuid/v4";
+import * as Collapse from "./Collapse.js";
+import * as Misc from "./Misc.js";
+
 export function Container ({className, ...attributes}) {
     Object.assign(attributes, {
         className: "card " + (className || "")
@@ -13,6 +17,8 @@ export function Header ({className, ...attributes}) {
 
     return <div {...attributes}/>
 }
+
+export const CollapseHeader = Collapse.makeToggle(Header);
 
 export function Body ({className, ...attributes}) {
     Object.assign(attributes, {
@@ -42,3 +48,28 @@ export function Basic ({header, children, ...attributes}) {
         </Container>
     );
 }
+
+export class Collapsible extends React.Component {
+    constructor (props) {
+        super(props);
+
+        this.hash = uuid();
+    }
+
+    render () {
+        const {header, children, ...attributes} = this.props;
+
+        return (
+            <Container {...attributes}>
+                <CollapseHeader target={this.hash}>
+                    {header}
+                </CollapseHeader>
+                <Collapse.Container id={this.hash}>
+                    <Body>
+                        {children}
+                    </Body>
+                </Collapse.Container>
+            </Container>
+        );
+    }
+};

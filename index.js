@@ -9,5 +9,6 @@ exports.Tab = require("./dist/Tab.js");
 exports.Navbar = require("./dist/Navbar.js");
 exports.Panel = require("./dist/Panel.js");
 exports.Card = require("./dist/Card.js");
+exports.Collapse = require("./dist/Collapse.js");
 exports.Misc = require("./dist/Misc.js");
 exports.Optimisation = require("./dist/Optimisation.js");

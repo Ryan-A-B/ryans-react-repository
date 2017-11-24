@@ -1,22 +1,27 @@
 {
-    "name": "ryans-react-repository",
-    "version": "0.9.0",
-    "license": "GPL-3.0",
-    "entry": "index.js",
-    "scripts": {
-        "build": "babel src/ --out-dir dist/",
-        "prepublish": "npm update && npm run build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Ryan-A-B/ryans-react-respository"
-    },
-    "bugs": "https://github.com/Ryan-A-B/ryans-react-respository/issues",
-    "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-plugin-transform-object-assign": "^6.8.0",
-        "babel-plugin-transform-object-rest-spread": "^6.19.0",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-react": "^6.24.1"
-    }
+  "name": "ryans-react-repository",
+  "version": "0.10.5",
+  "license": "GPL-3.0",
+  "entry": "index.js",
+  "scripts": {
+    "build": "babel src/ --out-dir dist/",
+    "prepublish": "npm update && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ryan-A-B/ryans-react-respository"
+  },
+  "bugs": "https://github.com/Ryan-A-B/ryans-react-respository/issues",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "react": "^15.6.2",
+    "uuid": "^3.1.0"
+  }
 }
