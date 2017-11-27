@@ -1,12 +1,16 @@
 .check-button, .radio-button {
+  display: flex;
+
   &:before {
     $padding: 0.1rem;
     $line-height: 1rem;
     $size: $line-height + 2 * $padding;
 
-    display: inline-block;
+    flex-shrink: 0;
+    display: block;
     width: $size;
     height: $size;
+    margin-right: 0.5rem;
     line-height: $line-height;
     padding: $padding;
     border: 0.1rem solid #111;
