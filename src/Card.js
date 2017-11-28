@@ -57,14 +57,14 @@ export class Collapsible extends React.Component {
     }
 
     render () {
-        const {header, children, ...attributes} = this.props;
+        const {show, header, children, ...attributes} = this.props;
 
         return (
             <Container {...attributes}>
                 <CollapseHeader target={this.hash}>
                     {header}
                 </CollapseHeader>
-                <Collapse.Container id={this.hash}>
+                <Collapse.Container id={this.hash} show={show}>
                     <Body>
                         {children}
                     </Body>

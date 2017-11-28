@@ -1,11 +1,11 @@
-export const Container = ({className, ...attributes}) => {
+export const Container = ({show, className, ...attributes}) => {
     Object.assign(attributes, {
         role: "tabpanel",
-        className: `collapse ${className || ""}`
+        className: `collapse ${className || ""} ${show ? "show" : ""}`
     });
 
     return <div {...attributes}/>;
-}
+};
 
 export const makeToggle = (Component) => {
     return ({target, ...attributes}) => {
