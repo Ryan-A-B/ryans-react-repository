@@ -56,22 +56,6 @@ export function Numeral ({...attributes}) {
     return <Input {...attributes}/>;
 }
 
-export function Group ({className, ...attributes}) {
-    Object.assign(attributes, {
-        className: "input-group " + (className || "")
-    });
-
-    return <div {...attributes}/>
-}
-
-export function GroupAddon ({className, ...attributes}) {
-    Object.assign(attributes, {
-        className: "input-group-addon " + (className || "")
-    });
-
-    return <span {...attributes}/>
-}
-
 export function Textarea ({className, onChange, ...attributes}) {
     Object.assign(attributes, {
         className: "form-control " + (className || ""),

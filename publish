@@ -1,8 +1,0 @@
-#!/bin/bash
-
-DIR=$(cd "$(dirname ${BASH_SOURCE[0]})" && pwd)
-
-sudo docker run --rm -it \
-    -v ~/.npmrc:/root/.npmrc:ro \
-    -v $DIR:/code:Z \
-    npm-publish
