@@ -1,4 +1,4 @@
-import uuid from "uuid/v4";
+//import uuid from "uuid/v4";
 import * as Collapse from "./Collapse.js";
 import * as Misc from "./Misc.js";
 
@@ -49,7 +49,7 @@ export function Basic ({header, children, ...attributes}) {
     );
 }
 
-export class Collapsible extends React.Component {
+/*export class Collapsible extends React.Component {
     constructor (props) {
         super(props);
 
@@ -72,4 +72,4 @@ export class Collapsible extends React.Component {
             </Container>
         );
     }
-};
+};*/

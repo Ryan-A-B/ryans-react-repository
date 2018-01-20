@@ -1,36 +1,36 @@
-export function Button ({type, className, ...attributes}) {
+export const Basic = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        type: type || "button",
-        className: "btn " + (className || "btn-default")
+        type: "button",
+        className: `btn ${className || "btn-light"}`
     });
 
     return <button {...attributes}/>;
-}
+};
 
-export function Submit ({type, className, ...attributes}) {
+export const Submit = ({type, className, ...attributes}) => {
     Object.assign(attributes, {
         type: type || "submit",
         className: className || "btn-primary"
     });
 
-    return <Button {...attributes}/>;
-}
+    return <Basic {...attributes}/>;
+};
 
-export function CallToAction ({className, ...attributes}) {
+export const CallToAction = ({className, ...attributes}) => {
     Object.assign(attributes, {
         className: "btn-cta " + (className || "")
     });
 
     return <Submit {...attributes}/>;
-}
+};
 
-export function Close ({className, ...attributes}) {
+export const Close = ({className, ...attributes}) => {
     Object.assign(attributes, {
         type: "button",
-        className: "close " + (className || ""),
-        "aria-label": "close",
+        className: `close ${className || ""}`,
+        'aria-label': "Close",
         children: <span aria-hidden="true">&times;</span>
     });
 
     return <button {...attributes}/>;
-}
+};

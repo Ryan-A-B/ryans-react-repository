@@ -1,144 +1,121 @@
-import {Button} from "./Button.js";
+import * as Button from "./Button";
 
-export function Modal ({className, tabIndex, role, ...attributes}) {
+export const Container = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        className: "modal " + (className || ""),
-        tabIndex: tabIndex || -1,
-        role: role || "dialog"
+        className: `modal ${className || ""}`,
+        tabIndex: "-1",
+        role: "dialog"
     });
 
     return <div {...attributes}/>;
-}
-export const Container = Modal;
+};
 
-export function Dialog ({className, role, ...attributes}) {
+export const Dialog = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        className: "modal-dialog " + (className || ""),
-        role: role || "document"
+        className: `modal-dialog ${className || ""}`,
+        role: "document"
     });
 
     return <div {...attributes}/>;
-}
+};
 
-export function Content ({className, ...attributes}) {
+export const Content = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        className: "modal-content " + (className || "")
+        className: `modal-content ${className || ""}`
     });
 
     return <div {...attributes}/>;
-}
+};
 
-export function HeaderWithoutClose ({className, ...attributes}) {
+export const Header = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        className: "modal-header " + (className || "")
+        className: `modal-header ${className || ""}`
     });
 
     return <div {...attributes}/>;
-}
+};
 
-export function Header ({children, ...attributes}) {
+export const HeaderWithClose = ({children, ...attributes}) => {
     return (
-        <HeaderWithoutClose {...attributes}>
-            <Button className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">
-                    &times;
-                </span>
-            </Button>
+        <Header>
             {children}
-        </HeaderWithoutClose>
+            <Button.Close data-dismiss="modal"/>
+        </Header>
     );
-}
+};
 
-export function Title ({className, ...attributes}) {
+export const Title = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        className: "modal-title " + (className || "")
+        className: `modal-title ${className || ""}`
     });
 
-    return <h4 {...attributes}/>;
-}
+    return <h5 {...attributes}/>;
+};
 
-export function Body ({className, ...attributes}) {
+export const Body = ({className, ...attributes}) => {
     Object.assign(attributes, {
-        className: "modal-body " + (className || "")
-    });
-
-    return <div {...attributes}/>;
-}
-
-export function FooterWithoutClose ({className, ...attributes}) {
-    Object.assign(attributes, {
-        className: "modal-footer " + (className || "")
+        className: `modal-body ${className || ""}`
     });
 
     return <div {...attributes}/>;
-}
+};
 
-export function Footer ({children, ...attributes}) {
+export const Footer = ({className, ...attributes}) => {
+    Object.assign(attributes, {
+        className: `modal-footer ${className || ""}`
+    });
+
+    return <div {...attributes}/>;
+};
+
+export const FooterWithClose = ({children, ...attributes}) => {
     return (
-        <FooterWithoutClose {...attributes}>
-            <button type="button" className="btn btn-default" data-dismiss="modal">
+        <Footer>
+            <Button.Basic data-dismiss="modal">
                 Close
-            </button>
-            {children}
-        </FooterWithoutClose>
+            </Button.Basic>
+        </Footer>
     );
-}
+};
 
-export function Bare ({title, children, ...attributes}) {
+export const Bare = ({children, ...attributes}) => {
     return (
-        <Modal {...attributes}>
+        <Container {...attributes}>
             <Dialog>
                 <Content>
-                    <Header>
-                        <Title>
-                            {title}
-                        </Title>
-                    </Header>
                     {children}
                 </Content>
             </Dialog>
-        </Modal>
+        </Container>
     );
-}
+};
 
-export function BareStatic ({title, children, ...attributes}) {
+export const BareStatic = ({...attributes}) => {
     Object.assign(attributes, {
         "data-backdrop": "static",
         "data-keyboard": "false"
     });
 
-    return (
-        <Modal {...attributes}>
-            <Dialog>
-                <Content>
-                    <HeaderWithoutClose>
-                        <Title>
-                            {title}
-                        </Title>
-                    </HeaderWithoutClose>
+    return <Bare {...attributes}/>;
+};
+
+const makeBasicLayout = (Bare) => {
+    return ({children, title, ...attributes}) => {
+        return (
+            <Bare {...attributes}>
+                <HeaderWithClose>
+                    <Title>
+                        {title}
+                    </Title>
+                </HeaderWithClose>
+                <Body>
                     {children}
-                </Content>
-            </Dialog>
-        </Modal>
-    );
-}
+                </Body>
+                <FooterWithClose/>
+            </Bare>
+        );
+    };
+};
 
-export function Basic ({children, ...attributes}) {
-    return (
-        <Bare {...attributes}>
-            <Body>
-                {children}
-            </Body>
-        </Bare>
-    );
-}
-
-export function Static ({children, ...attributes}) {
-    return (
-        <BareStatic {...attributes}>
-            <Body>
-                {children}
-            </Body>
-        </BareStatic>
-    );
-}
+export const Basic = makeBasicLayout(Bare);
+export const Static = makeBasicLayout(BareStatic);
