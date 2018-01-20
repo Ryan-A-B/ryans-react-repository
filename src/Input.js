@@ -1,7 +1,7 @@
 export function Input ({className, onChange, ...attributes}) {
     Object.assign(attributes, {
         className: "form-control " + (className || ""),
-        onChange: (e) => onChange($(e.target).val())
+        onChange: (e) => onChange(e.target.value)
     });
 
     return <input {...attributes}/>
@@ -59,7 +59,7 @@ export function Numeral ({...attributes}) {
 export function Textarea ({className, onChange, ...attributes}) {
     Object.assign(attributes, {
         className: "form-control " + (className || ""),
-        onChange: (e) => onChange($(e.target).val())
+        onChange: (e) => onChange(e.target.value)
     });
 
     return <textarea {...attributes}/>
@@ -68,12 +68,12 @@ export function Textarea ({className, onChange, ...attributes}) {
 export function Select ({options, onChange, className, ...attributes}) {
     Object.assign(attributes, {
         className: "form-control " + (className || ""),
-        onChange: (e) => onChange($(e.target).val())
+        onChange: (e) => onChange(e.target.value)
     });
 
     return (
         <select {...attributes}>
-            {$.map(options, (value, key) => <option value={value} key={value}>{key}</option>)}
+            {lodash.map(options, (value, key) => <option value={value} key={value}>{key}</option>)}
         </select>
     );
 }
