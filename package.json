@@ -11,7 +11,7 @@
   "scripts": {
     "start": "webpack -d --watch",
     "build": "webpack",
-    "install": "npm install build"
+    "install": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
